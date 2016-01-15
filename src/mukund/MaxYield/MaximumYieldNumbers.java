@@ -8,11 +8,18 @@ public class MaximumYieldNumbers {
 
 	public int[] findMaxYield(int[] strip){
 		int inclusive=0,exclusive=0,temp=0;
-		int len=strip.length;
+		int len=strip.length;int tot=0;
 		int [] result= new int[len];
 		
 		for(int res=0;res<len;res++){
 			result[res]=0;
+			tot=tot+strip[res];
+			
+			
+		}
+		if(tot==0){
+			System.out.print("Array has all Zeros");
+			System.exit(0);
 		}
 		
 		for(int i=0;i<len;i++){
@@ -55,10 +62,21 @@ public class MaximumYieldNumbers {
 		Scanner scan= new Scanner(System.in);
 		System.out.print("Enter the value of strip:");
 		n=scan.nextInt();
+		
+		if(n==0 || n<0){
+			System.out.print("None or Negative values not allowed");
+			System.exit(0);
+		}
 		System.out.print("Enter array value:");
 		strip= new int[n];
+		
 		for(int i=0;i<n;i++){
-		  strip[i]=scan.nextInt();
+			strip[i]=scan.nextInt();
+		if(strip[i]<=0){
+			System.out.print("None/Negative value not allowed");
+			System.exit(0);
+		}
+		  
 		}
 		int[] maxYieldValue=maxYield.findMaxYield(strip);
 		System.out.print("[");
