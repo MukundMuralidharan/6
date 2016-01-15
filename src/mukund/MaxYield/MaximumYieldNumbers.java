@@ -48,6 +48,8 @@ public class MaximumYieldNumbers {
 		}else{
 			result[len-1]=0;
 		}
+		System.out.print("Maximum Yield in Units:"+ inclusive);
+		System.out.print("\n");
 		
 		 return result;
 		
