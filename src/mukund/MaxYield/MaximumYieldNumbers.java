@@ -3,12 +3,14 @@ package mukund.MaxYield;
 
 import java.util.*;
 
+//Solution for Maximum yield in a mine(no adjacent mines allowed) problem.
 public class MaximumYieldNumbers {
 
 	public int[] findMaxYield(int[] strip){
 		int inclusive=0,exclusive=0,temp=0;
 		int len=strip.length;
 		int [] result= new int[len];
+		
 		for(int res=0;res<len;res++){
 			result[res]=0;
 		}
